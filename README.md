@@ -59,9 +59,9 @@ ___
     ```
     Change **BASE_DIR** in **settings.py**:
     ```
-        BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+       BASE_DIR = Path(__file__).resolve().parent.parent
         # to
-        BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+        BASE_DIR = Path(__file__).resolve().parent.parent.parent
     ```
     Move default __settings.py__ into new __settings__ module and rename __settings.py__ to __base.py__:
 
